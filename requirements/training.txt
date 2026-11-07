@@ -1,0 +1,10 @@
+# Install a PyTorch CUDA build matched to your GPU runtime first. The study used torch 2.11.0+cu130.
+transformers==4.53.0
+peft==0.17.1
+accelerate==1.15.0
+lm-format-enforcer==0.11.3
+jsonschema==4.26.0
+einops
+ninja
+packaging
+# Install causal-conv1d==1.7.0 then mamba-ssm==2.3.2.post1 with --no-build-isolation; see docs/RUNNING.md.

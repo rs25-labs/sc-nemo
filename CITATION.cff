@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the study and this software when using the workflow."
+type: software
+title: "Expert-guided Nemotron adaptation for neuroblastoma single-cell annotation"
+version: "1.0.0"
+date-released: "2026-11-07"
+license: MIT
+authors:
+  - family-names: Sreedhar
+    given-names: Rhea

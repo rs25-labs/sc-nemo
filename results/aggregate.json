@@ -1,0 +1,150 @@
+{
+  "project": "SCPCP000004",
+  "dataset": {
+    "eligible_cells": 98007,
+    "samples": 22,
+    "donors": 20,
+    "train": {
+      "donors": 12,
+      "clusters": 101
+    },
+    "validation": {
+      "donors": 4,
+      "clusters": 21
+    },
+    "test": {
+      "donors": 4,
+      "samples": 6,
+      "clusters": 67,
+      "expert_resolved": 57,
+      "expert_uncertain": 10
+    }
+  },
+  "identity": {
+    "untuned_matches": 29,
+    "v1_matches": 39,
+    "resolved_cases": 57,
+    "untuned_macro_f1": 0.301,
+    "v1_macro_f1": 0.465
+  },
+  "traceability": {
+    "untuned": {
+      "found": 484,
+      "total": 536
+    },
+    "v1": {
+      "found": 525,
+      "total": 529
+    }
+  },
+  "review": {
+    "untuned_original_flags": 67,
+    "v1_original_flags": 0,
+    "uncertain_cases": 10,
+    "v1_gate": {
+      "matching_accepted": 39,
+      "resolved_mismatch_accepted": 16,
+      "uncertain_accepted": 9,
+      "sent_to_review": 3
+    }
+  },
+  "completion": {
+    "identity_complete": 134,
+    "identity_attempts": 134,
+    "all_complete": 267,
+    "all_attempts": 268
+  },
+  "compute": {
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "trainable_parameters": 10119168,
+    "trainable_fraction": 0.00254,
+    "training_seconds": 225.94519070899878,
+    "training_peak_gib": 16.686323642730713,
+    "v1_identity_median_seconds": 41.6
+  },
+  "deepeval": {
+    "model_requested": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+    "model_returned": "private/nvidia/nemotron-3.5-super-120b-a12b",
+    "scores": 402,
+    "complete": 402,
+    "failed": 0,
+    "cases_per_arm": 67,
+    "metrics": [
+      {
+        "metric": "evidence_consistency",
+        "name": "Evidence consistency",
+        "untuned_mean": 0.49850746268656715,
+        "v1_mean": 0.5611940298507463,
+        "paired_mean_delta": 0.0626865671641791,
+        "v1_higher": 33,
+        "ties": 7,
+        "v1_lower": 27,
+        "cases_per_arm": 67,
+        "by_expert_review_status": {
+          "False": {
+            "untuned_mean": 0.5245614035087719,
+            "v1_mean": 0.5754385964912281,
+            "cases_per_arm": 57
+          },
+          "True": {
+            "untuned_mean": 0.35,
+            "v1_mean": 0.48,
+            "cases_per_arm": 10
+          }
+        }
+      },
+      {
+        "metric": "claim_restraint",
+        "name": "Restraint of unsupported claims",
+        "untuned_mean": 0.5223880597014926,
+        "v1_mean": 0.5880597014925373,
+        "paired_mean_delta": 0.06567164179104477,
+        "v1_higher": 33,
+        "ties": 13,
+        "v1_lower": 21,
+        "cases_per_arm": 67,
+        "by_expert_review_status": {
+          "False": {
+            "untuned_mean": 0.5368421052631579,
+            "v1_mean": 0.6087719298245614,
+            "cases_per_arm": 57
+          },
+          "True": {
+            "untuned_mean": 0.44,
+            "v1_mean": 0.47,
+            "cases_per_arm": 10
+          }
+        }
+      },
+      {
+        "metric": "expert_reference_fidelity",
+        "name": "Expert-reference fidelity",
+        "untuned_mean": 0.3492537313432836,
+        "v1_mean": 0.5761194029850747,
+        "paired_mean_delta": 0.22686567164179106,
+        "v1_higher": 44,
+        "ties": 8,
+        "v1_lower": 15,
+        "cases_per_arm": 67,
+        "by_expert_review_status": {
+          "False": {
+            "untuned_mean": 0.36140350877192984,
+            "v1_mean": 0.6280701754385966,
+            "cases_per_arm": 57
+          },
+          "True": {
+            "untuned_mean": 0.28,
+            "v1_mean": 0.28,
+            "cases_per_arm": 10
+          }
+        }
+      }
+    ],
+    "semantics": "Exploratory post hoc normalized rubric scores, not accuracy percentages; one related-family judge."
+  },
+  "limitations": [
+    "One expert, one training seed and four test donors.",
+    "Prior whole-cohort investigator exposure and an analyst-defined exact alias map.",
+    "No subtype/malignancy validation, independent judge validation, private/offline deployment, measured expert-time savings, or CASSIA/RAG superiority."
+  ]
+}

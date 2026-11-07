@@ -1,0 +1,8 @@
+-r analysis.txt
+torch==2.11.0
+transformers==4.53.0
+peft==0.17.1
+lm-format-enforcer==0.11.3
+accelerate==1.15.0
+
+-r deepeval.txt
