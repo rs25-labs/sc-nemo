@@ -1,4 +1,4 @@
-# Nemotron single-cell annotation
+# Nemotron single-cell annotation of neuroblastoma tumor cells
 
 Expert-guided adaptation of NVIDIA Nemotron 3 Nano 4B for single-cell annotation in pediatric neuroblastoma, with donor-separated evaluation and supplementary DeepEval assessment.
 
